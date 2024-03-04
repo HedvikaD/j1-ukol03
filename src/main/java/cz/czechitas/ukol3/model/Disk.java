@@ -27,6 +27,6 @@ public class Disk {
 
 
     public String toString() {
-        return "kapacita: " + getKapacita() + ", využité místo: " + getVyuziteMisto();
+        return "kapacita: " + getKapacita() + " B, využité místo: " + getVyuziteMisto() + " B";
     }
 }

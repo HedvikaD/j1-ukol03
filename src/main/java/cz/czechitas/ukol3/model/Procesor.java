@@ -22,6 +22,6 @@ public class Procesor {
     }
 
     public String toString() {
-        return "výrobce: " + getVyrobce() + ", rychlost: " + getRychlost();
+        return "výrobce: " + getVyrobce() + ", rychlost: " + getRychlost() + " Hz";
     }
 }

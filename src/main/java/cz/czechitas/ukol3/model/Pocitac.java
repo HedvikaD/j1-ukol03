@@ -49,35 +49,27 @@ public class Pocitac {
 
     }
     public void vypniSe() {
-        if (jeZapnuty = true) {
-            return;
+        if (jeZapnuty) {
+            System.out.println("Počítač se vypnul.");
+            jeZapnuty = false;
         }
-        jeZapnuty = false;
-        System.out.println("Počítač se vypnul.");
+
     }
     public void vytvorSouborOVelikosti(long velikost) {
         if (jeZapnuty) {
-            if (pevnyDisk.getVyuziteMisto() + velikost <= pevnyDisk.getKapacita()) {
-                pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() + velikost);
-                System.out.println("uloženo");
-            } else {
-                pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() + velikost);
-                System.out.println("nedostatek místa na disku");
-            }
+            pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() + velikost);
+            System.out.println("uloženo");
         } else {
-            return;
+            System.out.println("nedostatek místa na disku");
         }
+
     }
 
     public void vymazSouboryOVelikosti(long velikost) {
         if (jeZapnuty) {
-            long vyuziteMisto = pevnyDisk.getVyuziteMisto() - velikost;
-            pevnyDisk.setVyuziteMisto(vyuziteMisto);
+            pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() - velikost);
         } else {
             System.err.println("Počítač není zapnutý a nelze smazat soubor.");
         }
-
-    }
-
-
+   }
 }
